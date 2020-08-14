@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/moduhan/dev/webWorkspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1379321280.index
-3648145172.index
-4069227287.index
-4069227287.index
-170127896.index
-2688157384.index
