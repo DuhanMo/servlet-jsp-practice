@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.Scanner"%>
+<% page import="java.util.*, java.text.SimpleDateFormat"%>
+<%-- 지시자 태그는 크게page, include, taglib 구분자로 나뉜다.
+ 그 중 page는 해당 jsp페이지에서 사용하는 설정들을 적용할 때 사용한다.
+ 또한 선언의 중복, 혼용, 충돌을 막기위해 한번만 선언할 수 있다.
+ 단, import에 대해서는 예외적으로 추가선언이 가능하다ㅏ--%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP Test 2</title>
+</head>
+<body>
+	<%
+		Date now = new Date();
+		String Date = String.format("%tF",now);
+		String Date = String.format("%tp %tT",now,now);
+
+	%>
+	<ul>
+		<<<li>오늘 날짜 : <%=date%></li>
+	</ul>
+</body>
+</html>
