@@ -1,4 +1,4 @@
-package com.kh.jsp.common;
+package com.kh.jsp.member.encrypt;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -8,17 +8,18 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
 /**
- * Servlet Filter implementation class EncodingFilter
- */
-@WebFilter("/*")
-public class EncodingFilter implements Filter {
+ * Servlet Filter implementation class EncryptFilter
+ */                                        
+@WebFilter({ "/login.me", "/mInsert.me", "/mUpdate.me" })
+public class EncryptFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public EncodingFilter() {
+    public EncryptFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -33,8 +34,14 @@ public class EncodingFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		request.setCharacterEncoding("UTF-8");
-		chain.doFilter(request, response);
+		
+		HttpServletRequest req = (HttpServletRequest)request;
+		
+		// 비밀번호 원본값 (확인용)
+		request.setAttribute("originPwd", req.getParameter("userPwd"));
+		
+		EncryptWrapper lw = new EncryptWrapper(req);
+		chain.doFilter(lw, response);
 	}
 
 	/**

@@ -9,21 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.kh.jsp.member.exception.MemberException;
-import com.kh.jsp.member.model.service.MemberService;
-import com.kh.jsp.member.model.vo.Member;
-
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class LogoutServlet
  */
-@WebServlet("/login.me")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/logout.me")
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public LogoutServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,34 +28,16 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1. 인코딩 
+		// 이미 로그인 되어 있는 세션 종료하기
 		
-		// 2. view에서 전달받은 값 담기
-		String userId = request.getParameter("userId");
-		String userPwd= request.getParameter("userPwd");
+		HttpSession session = request.getSession(false);
 		
-		Member m = new Member(userId,userPwd);
-		
-		MemberService ms = new MemberService();
-		
-		// try~catch 구문
-		try {
-			m = ms.selectMember(m);
-			
-			System.out.println("회원 로그인 성공!");
-			
-			HttpSession session = request.getSession();
-			session.setAttribute("member", m);
-			
-			response.sendRedirect("index.jsp");
-			
-		}catch(MemberException e) {
-			request.setAttribute("msg", "회원 로그인 실패!");
-			request.setAttribute("exception", e);
-			
-			request.getRequestDispatcher("views/common/errorPage.jsp")
-			.forward(request, response);
+		if(session != null) {
+			System.out.println("로그아웃이 실행됩니다.");
+			session.invalidate();
 		}
+		
+		response.sendRedirect("index.jsp");
 	}
 
 	/**

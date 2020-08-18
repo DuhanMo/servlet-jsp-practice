@@ -14,16 +14,16 @@ import com.kh.jsp.member.model.service.MemberService;
 import com.kh.jsp.member.model.vo.Member;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class MemberUpdateServlet
  */
-@WebServlet("/login.me")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/mUpdate.me")
+public class MemberUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public MemberUpdateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,33 +32,43 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1. 인코딩 
+		// 회원정보 수정용 데이터 꺼내요기
+		String pwd = request.getParameter("userPwd");
+		int age = Integer.parseInt(request.getParameter("age"));
+		String email = request.getParameter("email");
+		String phone=request.getParameter("tel1")+"-"
+				   + request.getParameter("tel2")+"-"
+				   + request.getParameter("tel3");
+		String address=request.getParameter("zipCode")+", "
+				     + request.getParameter("address1")+", "
+				     + request.getParameter("address2");
+		String hobby = String.join(", ", request.getParameterValues("hobby"));
 		
-		// 2. view에서 전달받은 값 담기
-		String userId = request.getParameter("userId");
-		String userPwd= request.getParameter("userPwd");
+		HttpSession session = request.getSession(false);
+		Member m = (Member)session.getAttribute("member");
 		
-		Member m = new Member(userId,userPwd);
+		m.setUserPwd(pwd);
+		m.setAge(age);
+		m.setEmail(email);
+		m.setPhone(phone);
+		m.setAddress(address);
+		m.setHobby(hobby);
+		
+		System.out.println("변경한 회원 정보 확인 : " + m);
 		
 		MemberService ms = new MemberService();
 		
-		// try~catch 구문
+		
 		try {
-			m = ms.selectMember(m);
-			
-			System.out.println("회원 로그인 성공!");
-			
-			HttpSession session = request.getSession();
+			ms.updateMember(m);
+			System.out.println("회원 정보 수정 완료!");
 			session.setAttribute("member", m);
-			
 			response.sendRedirect("index.jsp");
 			
 		}catch(MemberException e) {
-			request.setAttribute("msg", "회원 로그인 실패!");
+			request.setAttribute("msg", "회원 정보 수정 중 에러 발생!");
 			request.setAttribute("exception", e);
-			
-			request.getRequestDispatcher("views/common/errorPage.jsp")
-			.forward(request, response);
+			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 	}
 
