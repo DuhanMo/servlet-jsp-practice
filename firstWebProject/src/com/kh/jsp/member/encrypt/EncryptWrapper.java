@@ -17,11 +17,11 @@ public class EncryptWrapper extends HttpServletRequestWrapper {
 	@Override
 	public String getParameter(String name) {
 		
-		if(name != null && name.equals("userPwd")) {
-			// 암호화한 값을 전달
+		if(name != null && name.equals("userPwd")){
+			// 암호화 값을 전달
 			name = getSHA512(super.getParameter(name));
-			System.out.println("암호화된 값 : " + name);
-		}else {
+			System.out.println("암호화 된 값 : " + name);
+		}else{
 			name = super.getParameter(name);
 		}
 		
@@ -29,33 +29,20 @@ public class EncryptWrapper extends HttpServletRequestWrapper {
 	}
 	
 	// 암호화를 위한 SHA512를 작성
-	private static String getSHA512(String pwd) {
+	private static String getSHA512(String pwd){
 		
-		try {
-			MessageDigest md = MessageDigest.getInstance("SHA-512"); // 어떤 알고리즘을 쓸건지 
-			byte[] bytes = pwd.getBytes(Charset.forName("UTF-8")); // 암호화값을 byte[]로 변경
+		try{
+			MessageDigest md = MessageDigest.getInstance("SHA-512"); // 어떤 알고리즘을 쓸건지
+			byte[] bytes = pwd.getBytes(Charset.forName("UTF-8")); // 암호화 값을 byte[]로 변경
 			md.update(bytes); // 변환작업
 			
 			return Base64.getEncoder().encodeToString(md.digest());
-			
-		}catch(NoSuchAlgorithmException e) {
+					
+		}catch(NoSuchAlgorithmException e){
 			System.out.println("암호화 에러 발생!");
 			e.printStackTrace();
 			
 			return null;
 		}
-		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-

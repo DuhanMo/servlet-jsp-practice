@@ -32,16 +32,12 @@ public class MemberUpdateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 회원정보 수정용 데이터 꺼내요기
+		// 회원정보 수정용 데이터 꺼내오기
 		String pwd = request.getParameter("userPwd");
 		int age = Integer.parseInt(request.getParameter("age"));
 		String email = request.getParameter("email");
-		String phone=request.getParameter("tel1")+"-"
-				   + request.getParameter("tel2")+"-"
-				   + request.getParameter("tel3");
-		String address=request.getParameter("zipCode")+", "
-				     + request.getParameter("address1")+", "
-				     + request.getParameter("address2");
+		String phone = request.getParameter("tel1") + "-" + request.getParameter("tel2") + "-" + request.getParameter("tel3");
+		String address = request.getParameter("zipCode") + ", " + request.getParameter("address1") + ", " + request.getParameter("address2");
 		String hobby = String.join(", ", request.getParameterValues("hobby"));
 		
 		HttpSession session = request.getSession(false);
@@ -58,15 +54,15 @@ public class MemberUpdateServlet extends HttpServlet {
 		
 		MemberService ms = new MemberService();
 		
-		
-		try {
+		try{
 			ms.updateMember(m);
 			System.out.println("회원 정보 수정 완료!");
+			
 			session.setAttribute("member", m);
 			response.sendRedirect("index.jsp");
 			
-		}catch(MemberException e) {
-			request.setAttribute("msg", "회원 정보 수정 중 에러 발생!");
+		}catch(MemberException e){
+			request.setAttribute("msg", "회원정보수정 중 에러 발생!");
 			request.setAttribute("exception", e);
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}

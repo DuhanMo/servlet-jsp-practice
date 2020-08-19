@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Servlet Filter implementation class EncryptFilter
- */                                        
+ */
 @WebFilter({ "/login.me", "/mInsert.me", "/mUpdate.me" })
 public class EncryptFilter implements Filter {
 
@@ -37,8 +37,8 @@ public class EncryptFilter implements Filter {
 		
 		HttpServletRequest req = (HttpServletRequest)request;
 		
-		// 비밀번호 원본값 (확인용)
-		request.setAttribute("originPwd", req.getParameter("userPwd"));
+		// 비밀번호 원본값(확인용)
+		request.setAttribute("originPwd", req.getParameter("userPwd"));	
 		
 		EncryptWrapper lw = new EncryptWrapper(req);
 		chain.doFilter(lw, response);

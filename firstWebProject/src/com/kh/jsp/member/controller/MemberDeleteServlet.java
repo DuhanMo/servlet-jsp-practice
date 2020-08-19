@@ -31,26 +31,29 @@ public class MemberDeleteServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 회원 아이디 가져오기 
+		// 회원 아이디 가져오기
 		HttpSession session = request.getSession(false);
 		String userId = ((Member)session.getAttribute("member")).getUserId();
 		
-		System.out.println("userId : " + userId);
+		System.out.println("회원 기존 아이디 : " + userId);
 		
 		MemberService ms = new MemberService();
 		
-		try {
+		try{
 			ms.deleteMember(userId);
 			
-			System.out.println("회원 탈퇴 성공!");
-			session.invalidate();
+			System.out.println("회원 탈퇴 완료");
+			
+			session.invalidate(); // 세션정보 무효화
+			
 			response.sendRedirect("index.jsp");
 			
-		}catch(MemberException e) { 
-		request.setAttribute("msg", "회원 탈퇴 수행 중 에러 발생!");
-		request.setAttribute("exception", e);
-		request.getRequestDispatcher("veiws/common/errorPage.jsp").forward(request,response);
-	}
+		}catch(MemberException e){
+			request.setAttribute("msg", "회원탈퇴 중 에러 발생!");
+			request.setAttribute("exception", e);
+			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
+		}
+
 	}
 
 	/**

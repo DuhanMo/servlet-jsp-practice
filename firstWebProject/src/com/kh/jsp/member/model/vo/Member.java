@@ -1,7 +1,7 @@
 package com.kh.jsp.member.model.vo;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class Member implements Serializable{
 
@@ -10,20 +10,19 @@ public class Member implements Serializable{
 	 */
 	private static final long serialVersionUID = -6946062357741025709L;
 	
-	// 1. 필드 변수 / 멤버 변수
-	private String userId;		// 사용자 아이디
-	private String userPwd;		// 사용자 비밀번호
-	private String userName;	// 사용자 이름
-	private String gender;		// 성별
-	private int age;			// 나이
-	private String email;		// 이메일
-	private String phone;		// 연락처
-	private String address;		// 주소
-	private String hobby;		// 취미
-	private Date enrollDate;	// 가입일
+	// 1. 필드변수 / 멤버변수
+	private String userId;	// 사용자 아이디
+	private String userPwd; // 사용자 비밀번호
+	private String userName;// 사용자 이름
+	private String gender;  // 성별
+	private int age;        // 나이
+	private String email;   // 이메일
+	private String phone;   // 연락처
+	private String address; // 주소 
+	private String hobby;   // 취미
+	private Date enrollDate;// 가입일
 	
 	public Member() {
-		super();
 	}
 
 	public Member(String userId, String userPwd) {
@@ -149,9 +148,5 @@ public class Member implements Serializable{
 	}
 	
 	
+	
 }
-
-
-
-
-

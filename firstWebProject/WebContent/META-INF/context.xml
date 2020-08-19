@@ -30,26 +30,29 @@
     
     <!-- 
     	name : 웹에서 해당 DB(자원)를 연결하기 위한 별칭
-    	auth :(Application / Container)
-    	      데이터베이스 연결 관리를 WAS에서 할것인지, 별도의 프로그램을 통해 제어할 것인지
-    	      설정하는 속성 
-    	type : DataSource, 데이터 베이스에 연결을 설정할 때 필요로 하는 기본 정보를 담은 객체
-    	maxTotal: 최대 DB 연결 접속자 수(no limit:-1)
-    	maxIdle : 유지할 연결 접속자 수( '' : -1)
-    	maxWaitMillis : 연결 대기 시간
+    	auth : (Application / Container)
+    		       데이터베이스 연결 관리를 WAS에서 할 것인지, 별도의 프로그램을 통해 제어할 것인지
+    		       설정하는 속성
+    	type : DataSource, 데이터베이스에 연결을 설정할 때 필요로 하는 기본 정보를 담은 객체
+    	maxTotal : 최대 DB연결 접속자 수(no limit:-1)
+    	maxIdle : 유지할 연결 접속자 수('' : -1)
+    	maxWaitMillis : 연결대기시간
      -->
-    
     <Resource name="jdbc/oraDB"
-     		  auth="Container"
-     		  type="javax.sql.DataSource"
-     		  maxTotal="20"
-     		  maxIdle="10"
-     		  maxWaitMillis="10000"
-     		  driverClassName="oracle.jdbc.driver.OracleDriver"
-     		  url="jdbc:oracle:thin:@localhost:1521:XE"
-     		  username="JSP"
-     		  password="JSP"/>
+    		  auth="Container"
+    		  type="javax.sql.DataSource"
+    		  maxTotal="20"
+    		  maxIdle="10"
+    		  maxWaitMillis="10000"
+    		  driverClassName="oracle.jdbc.driver.OracleDriver"
+    		  url="jdbc:oracle:thin:@localhost:1521:XE"
+    		  username="JSP"
+    		  password="JSP"/>
 </Context>
+
+
+
+
 
 
 

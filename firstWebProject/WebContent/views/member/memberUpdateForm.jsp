@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="<%=request.getContextPath()%>/resources/js/jquery-3.4.1.min.js"></script>
+<%-- <script src="<%=request.getContextPath()%>/resources/js/jquery-3.4.1.min.js"></script> --> header에 있어서 없어도 되는 애--%>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <title>회원 정보 수정</title>
 <style>
