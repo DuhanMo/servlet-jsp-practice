@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  TEST!!
+  <h1>메인페이지!</h1>
   </body>
 </html>

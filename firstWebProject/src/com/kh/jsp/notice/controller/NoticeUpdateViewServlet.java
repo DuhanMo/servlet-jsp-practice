@@ -35,12 +35,12 @@ public class NoticeUpdateViewServlet extends HttpServlet {
 		Notice n = new NoticeService().updateView(nno);
 		
 		String page = "";
-		if(n != null){
-			page = "views/notice/noticeUpdate.jsp";
+		if(n != null) {
+			page ="views/notice/noticeUpdate.jsp";
 			request.setAttribute("notice", n);
-		}else{
+		}else {
 			page = "views/common/errorPage.jsp";
-			request.setAttribute("msg", "공지 글 수정 실패");
+			request.setAttribute("msg", "공지 글 수정 페이지 연결 실패!");
 		}
 		request.getRequestDispatcher(page).forward(request, response);
 	}

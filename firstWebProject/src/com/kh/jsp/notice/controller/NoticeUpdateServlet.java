@@ -30,9 +30,23 @@ public class NoticeUpdateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int nno = Integer.parseInt(getInitParameter("nno"));
+		String title = request.getParameter("title");
+		String content= request.getParameter("content");
+		int nno = Integer.parseInt(request.getParameter("nno"));
 		
-//		Notice n = new NoticeService().updateNotice(nno);
+		Notice n = new Notice();
+		n.setNno(nno);
+		n.setNcontent(content);
+		n.setNtitle(title);
+		
+		int result = new NoticeService().updateNotice(n);
+		
+		if(result > 0) {
+			response.sendRedirect("selectOne.no?nno="+nno);
+		}else {
+			request.setAttribute("msg", "공지사항 수정 실패!");
+			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
+		}
 	}
 
 	/**

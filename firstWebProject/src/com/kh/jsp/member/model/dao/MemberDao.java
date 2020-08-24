@@ -13,35 +13,36 @@ import java.util.Properties;
 
 import com.kh.jsp.member.exception.MemberException;
 import com.kh.jsp.member.model.vo.Member;
-// Dao(Data Access Object)
-//	   Service로부터 받은 정보를
-//	      실제 데이터 베이스에 전달하여
-//     CRUD를 수행하는 객체
+//Dao(Data Access Object)
+//    Service로부터 받은 정보를
+//    실제 데이터베이스에 전달하여
+//    CRUD를 수행하는 객체
 public class MemberDao {
 
 	private Properties prop;
 	
-	public MemberDao(){
+	public MemberDao() {
 		prop = new Properties();
 		
-		String filePath = MemberDao.class.getResource("/config/member-query.properties").getPath();
-		try{
+		String filePath = MemberDao.class
+				.getResource("/config/member-query.properties").getPath();
+		try {
 			prop.load(new FileReader(filePath));
-		}catch(FileNotFoundException e){
+		}catch(FileNotFoundException e) {
 			e.printStackTrace();
-		}catch(IOException e){
+		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
+	
 	public Member selectMember(Connection con, Member m) throws MemberException {
 		Member result = null; // 결과를 담을 객체
 		PreparedStatement pstmt = null;
-		ResultSet rset = null; // Select의 결과를 담을 객체
+		ResultSet rset = null;   // Select의 결과를 담을 객체
 		
 		String sql = prop.getProperty("selectMember");
-		
-		try{
+		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, m.getUserId());
 			pstmt.setString(2, m.getUserPwd());
@@ -49,25 +50,25 @@ public class MemberDao {
 			rset = pstmt.executeQuery();
 			
 			if(rset.next()) {
-	            result = new Member();
-	            
-	            result.setUserId(m.getUserId());
-	            result.setUserPwd(m.getUserPwd());
-	               
-	            result.setUserName(rset.getString(3));
-	            result.setAge(rset.getInt("age"));
-	            result.setGender(rset.getString("GENDER"));
-	            result.setEmail(rset.getString("email"));
-	            result.setPhone(rset.getString("phone"));
-	            result.setAddress(rset.getString("address"));
-	            result.setHobby(rset.getString("hobby"));
-	            
-	         }
+				result = new Member();
+				
+				result.setUserId(m.getUserId());
+				result.setUserPwd(m.getUserPwd());
+					
+				result.setUserName(rset.getString(3));
+				result.setAge(rset.getInt("age"));
+				result.setGender(rset.getString("GENDER"));
+				result.setEmail(rset.getString("email"));
+				result.setPhone(rset.getString("phone"));
+				result.setAddress(rset.getString("address"));
+				result.setHobby(rset.getString("hobby"));
+				
+			}
 			
-		}catch(Exception e){
-//			e.printStackTrace();
+		}catch(Exception e) {
+			//e.printStackTrace();
 			throw new MemberException(e.getMessage());
-		}finally{
+		}finally {
 			close(rset);
 			close(pstmt);
 		}
@@ -75,14 +76,15 @@ public class MemberDao {
 		return result;
 	}
 
+
 	public int insertMember(Connection con, Member m) throws MemberException {
-		
 		int result = 0;
+		
 		PreparedStatement pstmt = null;
 		
 		String sql = prop.getProperty("insertMember");
 		
-		try{
+		try {
 			
 			pstmt = con.prepareStatement(sql);
 			
@@ -98,25 +100,25 @@ public class MemberDao {
 			
 			result = pstmt.executeUpdate();
 			
-		}catch(SQLException e){
+		}catch(SQLException e) {
 			throw new MemberException(e.getMessage());
-		}finally{
+		}finally {
 			close(pstmt);
 		}
-		
 		return result;
 	}
 
+
 	public int updateMember(Connection con, Member m) throws MemberException {
+		
 		int result = 0;
 		PreparedStatement pstmt = null;
 		
 		String sql = prop.getProperty("updateMember");
 		
-		try{
+		try {
 			
 			pstmt = con.prepareStatement(sql);
-			
 			pstmt.setString(1, m.getUserPwd());
 			pstmt.setInt(2, m.getAge());
 			pstmt.setString(3, m.getEmail());
@@ -127,36 +129,53 @@ public class MemberDao {
 			
 			result = pstmt.executeUpdate();
 			
-		}catch(SQLException e){
+		}catch (SQLException e) {
 			throw new MemberException(e.getMessage());
-		}finally{
+		}finally {
 			close(pstmt);
 		}
 		
 		return result;
 	}
 
-	public int deleteMember(Connection con, String userId) throws MemberException{
+
+	public int deleteMember(Connection con, String userId) throws MemberException {
 		
 		int result = 0;
 		PreparedStatement pstmt = null;
-		
 		String sql = prop.getProperty("deleteMember");
 		
-		try{
+		try {
 			pstmt = con.prepareStatement(sql);
-			
 			pstmt.setString(1, userId);
 			
 			result = pstmt.executeUpdate();
-		}catch(SQLException e){
-//			e.printStackTrace();
+		}catch(SQLException e) {
+			//e.printStackTrace();
 			throw new MemberException(e.getMessage());
-		}finally{
+		}finally {
 			close(pstmt);
 		}
+		
 		
 		return result;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

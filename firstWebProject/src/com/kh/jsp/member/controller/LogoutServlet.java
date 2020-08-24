@@ -1,6 +1,7 @@
 package com.kh.jsp.member.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +34,7 @@ public class LogoutServlet extends HttpServlet {
 		
 		if(session != null) {
 			System.out.println("로그아웃이 실행됩니다.");
-			session.invalidate(); // 세션정보 무효화
+			session.invalidate();
 		}
 		
 		response.sendRedirect("index.jsp");

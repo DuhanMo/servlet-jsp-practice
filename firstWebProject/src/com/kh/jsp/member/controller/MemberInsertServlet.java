@@ -37,33 +37,36 @@ public class MemberInsertServlet extends HttpServlet {
 		String gender = request.getParameter("gender");
 		int age = Integer.parseInt(request.getParameter("age"));
 		String email = request.getParameter("email");
-//		String phone = request.getParameter("phone");
-		String phone = request.getParameter("tel1") + "-"
-					 + request.getParameter("tel2") + "-"
-					 + request.getParameter("tel3");
-		String address = request.getParameter("zipCode") + ", "
-					   + request.getParameter("address1") + ", "
-					   + request.getParameter("address2");
-//		String[] hobbies = request.getParameterValues("hobby");
+		//String phone = request.getParameter("phone");
+		String phone=request.getParameter("tel1")+"-"  // 010-1234-1234
+				    +request.getParameter("tel2")+"-"
+				    +request.getParameter("tel3"); 
+		String address = request.getParameter("zipCode")+", "
+				       + request.getParameter("address1")+", "
+				       + request.getParameter("address2");
+		
+		//String[] hobbies = request.getParameterValues("hobby");
 		String hobby = String.join(", ", request.getParameterValues("hobby"));
 		
-		// 회원가입 시 전달하기 위한 vo 생성
+		// 회원 가입 시 전달하기 위한 vo생성
 		Member m = new Member(userId,userPwd,userName,gender,age,email,phone,address,hobby);
+		
 		System.out.println("가입 회원 정보 확인 : " + m);
 		
 		// 회원가입 서비스
 		MemberService ms = new MemberService();
 		
-		try{
+		try {
 			ms.insertMember(m);
 			System.out.println("회원 가입 완료");
 			
 			response.sendRedirect("index.jsp");
-		}catch(MemberException e){
-			request.setAttribute("msg", "회원가입 중 에러 발생!");
+		}catch(MemberException e) {
+			request.setAttribute("msg", "회원 가입 중 에러 발생!");
 			request.setAttribute("exception", e);
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
+	
 	}
 
 	/**

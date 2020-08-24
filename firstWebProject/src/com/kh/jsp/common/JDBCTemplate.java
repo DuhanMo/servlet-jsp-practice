@@ -11,20 +11,20 @@ import javax.sql.DataSource;
 
 public class JDBCTemplate {
 
-	public static Connection getConnection(){
+	public static Connection getConnection() {
 		Connection con = null;
-		try{
+		try {
 			Context initContext = new InitialContext();
-
+			
 			DataSource ds = (DataSource)initContext.lookup("java:comp/env/jdbc/oraDB");
 			con = ds.getConnection();
-
+			
 			con.setAutoCommit(false);
-
-		}catch(Exception e){
+			
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
-
+		
 		return con;
 	}
 
@@ -36,7 +36,7 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void close(Statement stmt) {
 		try {
 			if(stmt != null && !stmt.isClosed())
@@ -45,17 +45,17 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void close(ResultSet rset) {
 		try {
-
+			
 			if(rset != null && !rset.isClosed())
 				rset.close();
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void commit(Connection con) {
 		try {
 			if(con != null && !con.isClosed())
@@ -64,7 +64,7 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void rollback(Connection con) {
 		try {
 			if(con != null && !con.isClosed())
@@ -73,5 +73,7 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
+
+
 
 }

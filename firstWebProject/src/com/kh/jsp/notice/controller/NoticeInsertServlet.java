@@ -35,31 +35,31 @@ public class NoticeInsertServlet extends HttpServlet {
 		// 공지사항 제목, 작성자, 내용
 		String ntitle = request.getParameter("title");
 		String writer = request.getParameter("userId");
-		String content = request.getParameter("content");
+		String content= request.getParameter("content");
 		
 		String date = request.getParameter("date");
-		System.out.println("날짜 전달 확인 : " + date);
+		System.out.println("날짜 전달 확인 : " + date);  // 2020-08-18
 		
 		Date writeDate = null;
-		if(date !="" && date != null){
-			// 날짜가 입력되었다면
-			// 2020-08-18 --> 2020, 08, 18로 쪼갤 것
+		if(date !="" && date !=null) {
+			// 날짜가 들어왔다면
+			// 2020-08-18 --> 2020, 08, 18
 			String[] dateArr = date.split("-");
 			int[] intArr = new int[dateArr.length];
 			
-			// String -> int
-			for(int i=0; i<dateArr.length; i++){
+			// String->int
+			for(int i=0; i<dateArr.length;i++) {
 				intArr[i] = Integer.parseInt(dateArr[i]);
 			}
 			
-			writeDate = new Date(new GregorianCalendar(intArr[0], intArr[1]-1, intArr[2]).getTimeInMillis());
-			
-		}else{
-			// 날짜가 입력되지 않았다면 현재 날짜 기준으로 전달
-			writeDate = new Date(new GregorianCalendar().getTimeInMillis());
+			writeDate = new Date(new GregorianCalendar(intArr[0], intArr[1]-1, intArr[2])
+					.getTimeInMillis());
+		}else {
+			// 날짜를 들어오지않는다면 현재날짜 기준으로 전달
+			writeDate = new Date(new GregorianCalendar().getTimeInMillis()); 
 		}
 		
-		// 공지사항 등록을 위한 vo객체
+		// 공지사항 등록을 위한 VO객체
 		Notice n = new Notice();
 		n.setNtitle(ntitle);
 		n.setNwriter(writer);
@@ -68,13 +68,13 @@ public class NoticeInsertServlet extends HttpServlet {
 		
 		int result = new NoticeService().insertNotice(n);
 		
-		if(result>0){
-			// 공지사항 추가성공
+		if(result>0) {
+			// 공지사항 추가 성공
 			response.sendRedirect("selectList.no");
-		}else{
-			// 공지사항 추가실패
-			request.setAttribute("msg", "공지사항 등록 실패");
-			request.getRequestDispatcher("views/common/errorPage/jsp").forward(request, response);
+		}else {
+			// 공지사항 추가 실패
+			request.setAttribute("msg", "공지사항 등록 실패!");
+			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 	}
 

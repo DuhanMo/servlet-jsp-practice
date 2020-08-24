@@ -31,8 +31,9 @@ public class NoticeListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 공지사항 글 여러개를 받아
-		// 목록형태(ArrayList)로 데이터를 전달하는 서블릿
+		// 공지사항 글 여러 개를 받아
+		// 목록 형태로(ArrayList형태로)
+		// 데이터를 전달하는 서블릿
 		ArrayList<Notice> list = new ArrayList<>();
 		NoticeService ns = new NoticeService();
 		
@@ -40,12 +41,12 @@ public class NoticeListServlet extends HttpServlet {
 		
 		String page = "";
 		
-		if(list != null){
+		if(list != null) {
 			page = "views/notice/noticeList.jsp";
 			request.setAttribute("list", list);
-		}else{
-			page = "views/common/errorPage.jsp";
-			request.setAttribute("msg", "공지사항 목록 불러오기 에러~");
+		}else {
+			page ="views/common/errorPage.jsp";
+			request.setAttribute("msg", "공지사항 목록 불러오기 에러!");
 		}
 		
 		request.getRequestDispatcher(page).forward(request, response);

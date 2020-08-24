@@ -32,11 +32,11 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1. 인코딩
+		// 1. 인코딩 
 		
-		// 2.view에서 전달받은 값 담기
+		// 2. view에서 전달받은 값 담기
 		String userId = request.getParameter("userId");
-		String userPwd = request.getParameter("userPwd");
+		String userPwd= request.getParameter("userPwd");
 		
 		Member m = new Member(userId,userPwd);
 		
@@ -46,17 +46,19 @@ public class LoginServlet extends HttpServlet {
 		try {
 			m = ms.selectMember(m);
 			
-			System.out.println("회원 로그인 성공~");
+			System.out.println("회원 로그인 성공!");
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("member", m);
 			
 			response.sendRedirect("index.jsp");
-		} catch (MemberException e) {
-			request.setAttribute("msg","회원 로그인 실패!");
+			
+		}catch(MemberException e) {
+			request.setAttribute("msg", "회원 로그인 실패!");
 			request.setAttribute("exception", e);
 			
-			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
+			request.getRequestDispatcher("views/common/errorPage.jsp")
+			.forward(request, response);
 		}
 	}
 

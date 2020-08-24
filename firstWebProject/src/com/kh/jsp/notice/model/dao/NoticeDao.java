@@ -12,39 +12,36 @@ import java.util.Properties;
 
 import com.kh.jsp.notice.model.vo.Notice;
 import static com.kh.jsp.common.JDBCTemplate.*;
-
 public class NoticeDao {
 
 	private Properties prop;
 	
-	public NoticeDao(){
+	public NoticeDao() {
 		prop = new Properties();
+		String filePath = NoticeDao.class
+				.getResource("/config/notice-query.properties").getPath();
 		
-		String filePath = NoticeDao.class.getResource("/config/notice-query.properties").getPath();
-		
-		try{
+		try {
 			prop.load(new FileReader(filePath));
-		}catch(IOException e){
+		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public ArrayList<Notice> selectList(Connection con) {
-		
 		ArrayList<Notice> list = null;
-		
 		Statement stmt = null;
 		ResultSet rset = null;
 		
 		String sql = prop.getProperty("selectList");
 		
-		try{
+		try {
 			stmt = con.createStatement();
 			rset = stmt.executeQuery(sql);
-			// Insert, Update, Delete : executeUpdate()
-			// select : executeQuery()
+			// INSERT, UPDATE, DELETE : executeUpdate()
+			// SELECT :executeQuery()
 			list = new ArrayList<Notice>();
-			while(rset.next()){
+			while(rset.next()) {
 				Notice n = new Notice();
 				n.setNno(rset.getInt(1));
 				n.setNtitle(rset.getString("ntitle"));
@@ -56,33 +53,34 @@ public class NoticeDao {
 				list.add(n);
 			}
 			
-		}catch(SQLException e){
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
 			close(rset);
 			close(stmt);
 		}
 		
+		
 		return list;
 	}
 
 	public Notice selectOne(Connection con, int nno) {
 		Notice n = null;
-		
 		PreparedStatement pstmt = null;
-		ResultSet rset= null;
-		
+		ResultSet rset = null;
 		String sql = prop.getProperty("selectOne");
 		
-		try{
+		try {
 			pstmt = con.prepareStatement(sql);
+			
 			pstmt.setInt(1, nno);
 			
-			// INSERT, UPDATE, DELETE : executeUpdate();
-			// SELECT : executeQuery();
+			// INSERT, UPDATE, DELETE : executeUpdate()
+			// SELECT : executeQuery()
+			
 			rset = pstmt.executeQuery();
 			
-			if(rset.next()){
+			if(rset.next()) {
 				n = new Notice();
 				n.setNno(nno);
 				n.setNtitle(rset.getString("ntitle"));
@@ -92,9 +90,9 @@ public class NoticeDao {
 				n.setNdate(rset.getDate("ndate"));
 			}
 			
-		}catch(SQLException e){
+		}catch(SQLException e) {
 			e.printStackTrace();
-		}finally{
+		}finally {
 			close(rset);
 			close(pstmt);
 		}
@@ -106,18 +104,16 @@ public class NoticeDao {
 		int result = 0;
 		
 		PreparedStatement pstmt = null;
-		
 		String sql = prop.getProperty("updateReadCount");
 		
-		try{
+		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, nno);
 			
 			result = pstmt.executeUpdate();
-			
-		}catch(SQLException e){
+		}catch(SQLException e) {
 			e.printStackTrace();
-		}finally{
+		}finally {
 			close(pstmt);
 		}
 		
@@ -126,28 +122,130 @@ public class NoticeDao {
 
 	public int insertNotice(Connection con, Notice n) {
 		int result = 0;
-		
-		PreparedStatement pstmt = null;
+		PreparedStatement pstmt =null;
 		
 		String sql = prop.getProperty("insertNotice");
-		
-		try{
+		try {
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, n.getNtitle());
 			pstmt.setString(2, n.getNcontent());
-			pstmt.setString(3, n.getNwriter());
+			pstmt.setString(3,n.getNwriter());
 			pstmt.setDate(4, n.getNdate());
 			
 			result = pstmt.executeUpdate();
-			
-		}catch(SQLException e){
+		}catch(SQLException e) {
 			e.printStackTrace();
-		}finally{
+		}finally {
 			close(pstmt);
 		}
 		
 		return result;
 	}
 
+	public int updateNotice(Connection con, Notice n) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		
+		String sql = prop.getProperty("updateNotice");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, n.getNtitle());
+			pstmt.setString(2, n.getNcontent());
+			pstmt.setInt(3, n.getNno());
+			
+			result = pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public int deleteNotice(Connection con, int nno) {	
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		
+		String sql = prop.getProperty("deleteNotice");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, nno);
+			result = pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public ArrayList<Notice> searchNotice(Connection con, String category, String keyword) {
+		ArrayList<Notice> list = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = null;
+		
+		switch(category) {
+		case "writer":
+			sql = prop.getProperty("searchWriterNotice");
+			break;
+		case "title":
+			sql = prop.getProperty("searchTitleNotice");
+			break;
+		case "content":
+			sql = prop.getProperty("searchContentNotice");
+			break;
+		}
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, keyword);
+			
+			rset = pstmt.executeQuery();
+			list = new ArrayList<Notice>();
+			
+			while(rset.next()) {
+				Notice n = new Notice();
+				n.setNno(rset.getInt("nno"));
+				n.setNtitle(rset.getString("ntitle"));
+				n.setNcontent(rset.getString("ncontent"));
+				n.setNwriter(rset.getString("nwriter"));
+				n.setNcount(rset.getInt("ncount"));
+				n.setNdate(rset.getDate("ndate"));
+				
+				list.add(n);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return list;
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

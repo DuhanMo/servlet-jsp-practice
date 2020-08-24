@@ -36,13 +36,14 @@ public class NoticeSelectOneServlet extends HttpServlet {
 		
 		Notice n = ns.selectOne(nno);
 		
-		String page = "";
-		if(n != null){
+		String page ="";
+		
+		if(n != null) {
 			page = "views/notice/noticeDetail.jsp";
 			request.setAttribute("notice", n);
-		}else{
+		}else {
 			page = "views/common/errorPage.jsp";
-			request.setAttribute("msg", "공지사항 보기 실패");
+			request.setAttribute("msg", "공지사항 상세 보기 실패!");
 		}
 		
 		request.getRequestDispatcher(page).forward(request, response);

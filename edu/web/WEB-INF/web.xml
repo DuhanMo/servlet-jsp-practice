@@ -52,4 +52,9 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <display-name>edu</display-name>
+    <context-param>
+        <param-name>contextConfig</param-name>
+        <param-value>/WEB-INF/context.xml</param-value>
+    </context-param>
 </web-app>

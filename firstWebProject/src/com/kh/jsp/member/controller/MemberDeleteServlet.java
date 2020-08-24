@@ -1,6 +1,7 @@
 package com.kh.jsp.member.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,24 +37,20 @@ public class MemberDeleteServlet extends HttpServlet {
 		String userId = ((Member)session.getAttribute("member")).getUserId();
 		
 		System.out.println("회원 기존 아이디 : " + userId);
-		
+	
 		MemberService ms = new MemberService();
 		
-		try{
+		try {
 			ms.deleteMember(userId);
 			
-			System.out.println("회원 탈퇴 완료");
-			
-			session.invalidate(); // 세션정보 무효화
-			
+			System.out.println("회원 탈퇴성공!");
+			session.invalidate();
 			response.sendRedirect("index.jsp");
-			
-		}catch(MemberException e){
-			request.setAttribute("msg", "회원탈퇴 중 에러 발생!");
+		}catch(MemberException e) {
+			request.setAttribute("msg", "회원 탈퇴 수행 중 에러 발생!");
 			request.setAttribute("exception", e);
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
-
 	}
 
 	/**
