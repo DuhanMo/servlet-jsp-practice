@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>비동기통신 연습 프로젝트 </title>
   </head>
   <body>
-  $END$
+  <h2>Ajax 프로젝트<</h2>
+  <a href="views/jQueryAjaxTest.jsp">
+    <h3>jQuery를 활용한 비동기 통신</h3>
+  </a>
   </body>
 </html>

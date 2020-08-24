@@ -1,122 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="testAjaxProject:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8f81404f-810d-4b21-bdb4-d008e019717b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../edu/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/CookieTest1Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/CookieTest2Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/CookieTest3Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/ServletContextTest1Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/ServletContextTest2Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/ServletContextTest3Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/ServletContextTest4Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../edu/src/com/edu/test/ShareObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/controller/BoardInsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/controller/BoardListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/controller/BoardSelectOneServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/dao/BoardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/service/BoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/vo/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/vo/PageInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/boardComment/controller/CommentInsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/boardComment/model/dao/BoardCommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/boardComment/model/service/BoardCommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/boardComment/model/vo/BoardComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeSearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/config/board-query.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/src/config/comment-query.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/META-INF/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/WEB-INF/server-config.wsdd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/intro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/boardUploadFiles/statue-918889_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/background_11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/background_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sample/img_sample9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/resources/images/sitelogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/board/boardDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/board/boardInsertForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/board/boardList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/common/errorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/common/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/common/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/member/memberJoinForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/member/memberUpdateForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/notice/noticeDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/notice/noticeInsertForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/notice/noticeList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstWebProject/web/views/notice/noticeUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/server-config.wsdd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/out/artifacts/edu_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/out/artifacts/edu_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/out/artifacts/edu_war_exploded/edu/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/out/artifacts/edu_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/out/artifacts/edu_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/web/edu/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/META-INF/context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/intro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/background_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/background_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sample/img_sample9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/resources/images/sitelogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/common/errorPage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/common/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/member/memberJoinForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/member/memberUpdateForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/notice/noticeDetail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/notice/noticeInsertForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/notice/noticeList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/WebContent/views/notice/noticeUpdate.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/build/classes/config/member-query.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/build/classes/config/notice-query.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/common/JDBCTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/common/JDBCTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberInsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberInsertServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/controller/MemberUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/encrypt/EncryptFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/encrypt/EncryptFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/encrypt/EncryptWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/encrypt/EncryptWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/exception/MemberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/exception/MemberException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/dao/MemberDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/vo/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/vo/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeInsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeInsertServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeSelectOneServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeSelectOneServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeUpdateViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/controller/NoticeUpdateViewServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/dao/NoticeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/vo/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/notice/model/vo/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/config/member-query.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/config/member-query.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/config/notice-query.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/config/notice-query.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/js/jquery-3.5.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +39,16 @@
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="9" lean-forward="true" selection-end-line="19" />
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -157,9 +61,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -206,10 +118,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/resources/js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -307,12 +225,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598252293972</updated>
-      <workItem from="1598252297249" duration="241000" />
+      <workItem from="1598252297249" duration="912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241000" />
+    <option name="totallyTimeSpent" value="912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -324,7 +242,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.3299363" />
       <window_info anchor="bottom" id="Terminal" />
@@ -336,7 +254,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -363,10 +281,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="9" lean-forward="true" selection-end-line="19" />
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
