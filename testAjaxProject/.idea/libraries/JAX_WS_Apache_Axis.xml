@@ -9,6 +9,9 @@
       <root url="jar://$PROJECT_DIR$/lib/commons-discovery-0.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../apache-tomcat-8.5.57/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../apache-tomcat-8.5.57/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jar_folder/json-simple-1.1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

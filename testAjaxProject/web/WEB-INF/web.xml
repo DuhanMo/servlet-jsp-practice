@@ -25,6 +25,10 @@
         </init-param>
         <load-on-startup>100</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>com.kh.ajax.controller.TestServlet1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AxisServlet</servlet-name>
         <url-pattern>/servlet/AxisServlet</url-pattern>
