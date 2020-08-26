@@ -288,7 +288,7 @@
             type: "get",
             success: function (data) {
                 console.log(data);
-                $.each(data,function (index,value) {
+                $.each(data, function (index, value) {
                     var $tr = $('<tr>');
                     var $userNo = $('<td>').text(value.userNo);
                     var $userName = $('<td>').text(value.userName);
@@ -309,6 +309,32 @@
 
     })
 </script>
+
+<h3>10. 서버에서 리스트 가져와 select항목 생성하기</h3>
+<button id="selectBtn">ajax 결과확인</button>
+
+<select id="selectTest"></select>
+
+<script>
+    $('#selectBtn').click(function () {
+        $.ajax({
+            url: '/ajax/test10.do',
+            type: 'get',
+            success: function (data) {
+                var $select = $('#selectTest');
+                for (var i = 0; i < data.length; i++) {
+                    $select.append("<option value='"
+                        + data[i].userNo + "'>"
+                        + data[i].userName + "</option>");
+                }
+            }, error: function () {
+                console.log("에러가 났어요ㅠㅠ");
+            }
+        });
+
+    });
+</script>
+
 </body>
 </html>
 

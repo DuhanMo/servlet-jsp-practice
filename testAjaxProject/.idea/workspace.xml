@@ -7,24 +7,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f81404f-810d-4b21-bdb4-d008e019717b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../edu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/artifacts/firstWebProject_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/libraries/JAX_WS_Apache_Axis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/firstWebProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/WEB-INF/classes/META-INF/firstWebProject.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/WEB-INF/server-config.wsdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/artifacts/firstWebProject_war_exploded/intro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/production/firstWebProject/META-INF/firstWebProject.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/production/firstWebProject/config/board-query.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/production/firstWebProject/config/comment-query.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/production/firstWebProject/config/member-query.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/out/production/firstWebProject/config/notice-query.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/board/model/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/com/kh/jsp/member/model/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/config/board-query.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/config/board-query.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/src/config/member-query.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/src/config/member-query.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/web/WEB-INF/server-config.wsdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWebProject/web/views/member/memberJoinForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWebProject/web/views/member/memberJoinForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/testAjaxProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/testAjaxProject_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/views/jQueryAjaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/testAjaxProject_war_exploded/views/jQueryAjaxTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserListUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,30 +63,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="330" column="41" lean-forward="true" selection-start-line="330" selection-start-column="41" selection-end-line="330" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#5790#5796#0#HTML" expanded="true" />
-                <element signature="e#5796#5802#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet9.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="498">
+              <caret line="372" selection-start-line="372" selection-end-line="372" />
             </state>
           </provider>
         </entry>
@@ -92,7 +99,10 @@
         <option value="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet7.java" />
         <option value="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet8.java" />
         <option value="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet9.java" />
+        <option value="$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserListUtil.java" />
         <option value="$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet10.java" />
+        <option value="$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet11.java" />
       </list>
     </option>
   </component>
@@ -115,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,67 +154,30 @@
             <path>
               <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testAjaxProject" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="testAjaxProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="JAX-WS-Apache Axis" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -212,17 +186,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/resources/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,18 +296,19 @@
       <option name="presentableId" value="Default" />
       <updated>1598252293972</updated>
       <workItem from="1598252297249" duration="16549000" />
-      <workItem from="1598338061336" duration="6216000" />
+      <workItem from="1598338061336" duration="8734000" />
+      <workItem from="1598418792958" duration="86000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22765000" />
+    <option name="totallyTimeSpent" value="25369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73954374" visible="true" weight="0.16094421" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73954374" visible="true" weight="0.25035766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -343,7 +318,7 @@
       <window_info x="1011" y="198" width="137" height="526" id="Web" internal_type="SLIDING" order="7" sideWeight="0.26045626" side_tool="true" type="SLIDING" weight="0.2020649" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,9 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="46" column="34" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="e#797#805#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -527,26 +499,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/ajax/model/vo/UserListUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet10.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kh/ajax/controller/TestServlet9.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="585">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/jQueryAjaxTest.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="330" column="41" lean-forward="true" selection-start-line="330" selection-start-column="41" selection-end-line="330" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5790#5796#0#HTML" expanded="true" />
-            <element signature="e#5796#5802#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="498">
+          <caret line="372" selection-start-line="372" selection-end-line="372" />
         </state>
       </provider>
     </entry>
@@ -556,10 +549,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>testAjaxProject:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -567,6 +562,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -600,6 +596,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>testAjaxProject</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
