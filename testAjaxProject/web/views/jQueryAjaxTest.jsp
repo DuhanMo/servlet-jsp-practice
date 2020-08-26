@@ -373,11 +373,12 @@
 					$select =  $('#gsonMap');
 					$select.find('option').remove();
 					
-					for(var name in data){
+					for(var index in data){
 						var $option = $('<option>');
-						$option.val(data[name].userNo);
-						$option.text(data[name].userName);
-						
+						$option.val(data[index].userNo);
+						$option.text(data[index].userName);
+						console.log(data[index].userNo);
+						console.log(data[index].userName);
 						$select.append($option);
 					}
 				},error:function(){
