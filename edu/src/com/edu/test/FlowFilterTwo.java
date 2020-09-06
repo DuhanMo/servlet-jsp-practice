@@ -4,6 +4,7 @@ import javax.servlet.*;
 import java.io.IOException;
 
 public class FlowFilterTwo implements Filter {
+    String charset;
     public void destroy() {
         System.out.println("destroy() 호출....... two");
 
@@ -12,7 +13,7 @@ public class FlowFilterTwo implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
 
 
-//        req.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding(charset);
         System.out.println("doFilter() 호출 전....... two");
         chain.doFilter(req,resp);
         System.out.println("doFilter() 호출 후 ....... two");
@@ -21,6 +22,7 @@ public class FlowFilterTwo implements Filter {
 
     public void init(FilterConfig config) throws ServletException {
         System.out.println("init() 호출....... two");
+        charset = config.getInitParameter("en");
     }
 
 }
