@@ -29,6 +29,8 @@
 <title>공지 사항 수정</title>
 </head>
 <body>
+if(test>10){
+}else{
 	<%@ include file="../common/header.jsp" %>
 	<% if(m != null && m.getUserId().equals("admin")){ %>
 	<div class="outer">
