@@ -1,9 +1,8 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" import="java.util.*, com.kh.jsp.notice.model.vo.*" %>
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+         pageEncoding="UTF-8" import="java.util.*, com.kh.jsp.notice.model.vo.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,32 +11,29 @@
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <style>
-        .outer {
-            width: 800px;
-            height: 500px;
-            background: black;
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
+        .outer{
+            width:800px;
+            height:500px;
+            background:black;
+            color:white;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:50px;
         }
-
         table {
-            border: 1px solid white;
-            text-align: center;
+            border:1px solid white;
+            text-align:center;
         }
-
         .tableArea {
-            width: 650px;
-            height: 350px;
-            margin-left: auto;
-            margin-right: auto;
+            width:650px;
+            height:350px;
+            margin-left:auto;
+            margin-right:auto;
         }
-
         .searchArea {
-            width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            width:650px;
+            margin-left:auto;
+            margin-right:auto;
         }
     </style>
 </head>
@@ -55,16 +51,15 @@
                 <th>조회수</th>
                 <th width="100px">작성일</th>
             </tr>
-            <c:forEach var="n" items="$ {list }">
+            <c:forEach var="n" items="${ list }">
                 <tr>
                     <td>${ n.nno }</td>
-                    <td>${ n.title }</td>
+                    <td>${ n.ntitle }</td>
                     <td>${ n.nwriter }</td>
                     <td>${ n.ncount }</td>
                     <td>${ n.ndate }</td>
                 </tr>
             </c:forEach>
-
         </table>
     </div>
     <div class="searchArea" align="center">
@@ -76,27 +71,27 @@
         </select>
         <input type="search" id="keyword" placeholder="키워드를 입력하세요!">
         <button type="button" onclick="search();">검색하기</button>
-        <c:if test="${!empty member and member.userId eq 'admin'}">
+        <c:if test="${ !empty member and member.userId eq 'admin' }">
             <button onclick="location.href='views/notice/noticeInsertForm.jsp'">작성하기</button>
         </c:if>
     </div>
 </div>
 <script>
-    $(function () {
+    $(function(){
 
-        $("#listArea td").mouseenter(function () {
-            $(this).parent().css({"background": "darkgray", "cursor": "pointer"});
-        }).mouseout(function () {
-            $(this).parent().css({"background": "black"});
-        }).click(function () {
+        $("#listArea td").mouseenter(function(){
+            $(this).parent().css({"background":"darkgray", "cursor":"pointer"});
+        }).mouseout(function(){
+            $(this).parent().css({"background":"black"});
+        }).click(function(){
             //console.log($(this).parent().children().eq(0).text());
             var nno = $(this).parent().children().eq(0).text();
-            location.href = "<%=request.getContextPath()%>/selectOne.no?nno=" + nno;
+            location.href="<%=request.getContextPath()%>/selectOne.no?nno=" + nno;
         });
     });
 
-    function search() {
-        location.href = "<%=request.getContextPath()%>/searchNotice.no?con=" + $('#searchCondition').val() + "&keyword=" + $('#keyword').val();
+    function search(){
+        location.href="<%=request.getContextPath()%>/searchNotice.no?con="+$('#searchCondition').val()+"&keyword="+$('#keyword').val();
     }
 
 </script>
